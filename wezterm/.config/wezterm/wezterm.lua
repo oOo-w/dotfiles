@@ -9,6 +9,8 @@ local config = {
 	initial_cols = 100,
 	initial_rows = 30,
 
+	audible_bell = "Disabled",
+
 	use_fancy_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = true,
 	window_decorations = "NONE",

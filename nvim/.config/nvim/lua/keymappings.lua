@@ -1,17 +1,17 @@
 return {
   n = {
-    -- -- run code
-    -- ["<Leader>r"] = { name = "Code Runner" },
-    -- ["<Leader>rc"] = { name = " C/C++" },
+    -- Run Task (using cmake-tools.nvim and overseer.nvim)
+    ["<Leader>r"] = { desc = " Run Task" },
+    ["<Leader>rc"] = { desc = " Run Cpp" },
+    ["<Leader>rcb"] = { "<cmd>CMakeBuild<cr><cmd>OverseerOpen<cr>", desc = "CMake Build" },
+    ["<Leader>rcr"] = { "<cmd>CMakeRun<cr><cmd>OverseerOpen<cr>", desc = "Run Target" },
+    ["<Leader>rcg"] = { "<cmd>CMakeGenerate<cr><cmd>OverseerOpen<cr>", desc = "Generate Build Directory" },
 
     -- navigate buffer tabs
     ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
     ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
     -- mappings seen under group name "Buffer"
     ["<Leader>b"] = { name = " Buffer" },
-    -- set close buffer, because copilot overwrites it.
-    ["<Leader>bx"] = { "<cmd>bd<cr>", desc = "Close Buffer" },
-    ["<Leader>bX"] = { "<cmd>bd!<cr>", desc = "Force Close Buffer" },
 
     -- mapping copilot chat
     ["<Leader>a"] = { name = " Copilot Chat" },
@@ -28,7 +28,7 @@ return {
     },
 
     -- set project.nvim plugin keymapping
-    ["<Leader>fp"] = { "<cmd>Telescope projects<cr>", desc = "Find projects" },
+    ["<Leader>fp"] = { "<cmd>Telescope projects<cr><Esc>", desc = "Find projects" },
 
     -- open MiniFile
     ["<Leader>E"] = { "<cmd>lua MiniFiles.open()<cr>", desc = "Open MiniFiles" },

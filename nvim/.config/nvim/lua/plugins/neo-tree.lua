@@ -10,6 +10,11 @@ return {
   opts = {
     window = {
       width = 0.20,
+      mappings = {
+        ["v"] = "vsplit_with_window_picker",
+        ["S"] = "split_with_window_picker",
+        ["s"] = "none",
+      },
     },
   },
 }

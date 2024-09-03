@@ -3,9 +3,6 @@ return {
     -- Run Task (using cmake-tools.nvim and overseer.nvim)
     ["<Leader>r"] = { desc = " Run Task" },
     ["<Leader>rc"] = { desc = " Run Cpp" },
-    ["<Leader>rcb"] = { "<cmd>CMakeBuild<cr><cmd>OverseerOpen<cr>", desc = "CMake Build" },
-    ["<Leader>rcr"] = { "<cmd>CMakeRun<cr><cmd>OverseerOpen<cr>", desc = "Run Target" },
-    ["<Leader>rcg"] = { "<cmd>CMakeGenerate<cr><cmd>OverseerOpen<cr>", desc = "Generate Build Directory" },
 
     -- navigate buffer tabs
     ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
@@ -45,5 +42,9 @@ return {
 
   t = {
     ["<Esc><Esc>"] = { "<C-d>", desc = "Exit terminal mode" },
+  },
+
+  i = {
+    ["jk"] = { "<Esc>" },
   },
 }

@@ -17,13 +17,13 @@ local config = {
 	window_background_opacity = 0.85,
 	text_background_opacity = 0.85,
 	window_padding = {
-		left = 25,
-		right = 15,
-		top = 20,
-		bottom = 5,
+		left = 40,
+		right = 20,
+		top = 30,
+		bottom = 10,
 	},
 
-	leader = { key = "Space", mods = "CTRL" },
+	leader = { key = "a", mods = "CTRL" },
 	keys = {
 		-- Tab Config
 		{
@@ -65,7 +65,7 @@ local config = {
 		{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
 		{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
 		{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
-		{ key = "Enter", mods = "CTRL", action = act.ToggleFullScreen },
+		-- { key = "Enter", mods = "CTRL", action = act.ToggleFullScreen },
 	},
 }
 return config

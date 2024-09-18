@@ -24,11 +24,3 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.opt_local.fo:remove "r"
   end,
 })
-
--- Identify launch files as XML type.
-vim.api.nvim_exec(
-  [[
-  autocmd BufRead,BufNewFile *.launch setfiletype xml
-]],
-  false
-)

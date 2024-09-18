@@ -8,7 +8,6 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.completion.cmp-cmdline" },
-  { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
   -- import/override with your plugins folder
 }

@@ -63,7 +63,7 @@ return {
         -- Needed if you want compile_commands.json
         "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
         -- Needed if you use conan to manage c++ packages
-        "-DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=/home/chaibowen/.conan2/conan_provider.cmake",
+        -- "-DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=/home/chaibowen/.conan2/conan_provider.cmake",
       },
       cmake_use_preset = false,
       cmake_build_directory = "build",

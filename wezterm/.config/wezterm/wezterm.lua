@@ -17,7 +17,7 @@ local config = {
 	window_background_opacity = 0.85,
 	text_background_opacity = 0.85,
 	window_padding = {
-		left = 40,
+		left = 50,
 		right = 20,
 		top = 30,
 		bottom = 10,
@@ -65,7 +65,7 @@ local config = {
 		{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
 		{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
 		{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
-		-- { key = "Enter", mods = "CTRL", action = act.ToggleFullScreen },
+		{ key = "F11", mods = "", action = act.ToggleFullScreen },
 	},
 }
 return config

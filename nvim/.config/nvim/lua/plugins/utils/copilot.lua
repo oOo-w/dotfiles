@@ -17,7 +17,7 @@ return {
       -- See Configuration section for rest
       show_help = false,
       window = {
-        width = 0.4,
+        width = 0.3,
       },
       -- Set default prompts to chinese.
       prompts = {

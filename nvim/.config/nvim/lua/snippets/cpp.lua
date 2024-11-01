@@ -6,7 +6,6 @@ local line_begin = require("luasnip.extras.expand_conditions").line_begin
 return {
   s(
     { trig = "main", snippetType = "autosnippet" },
-
     fmta(
       [[
         int main(int argc, char** argv) {

@@ -11,5 +11,13 @@ return {
     kmap({ "n", "v", "i" }, "<F7>", function() require("knap").toggle_autopreviewing() end)
     -- F8 invokes a SyncTeX forward search, or similar, where appropriate
     kmap({ "n", "v", "i" }, "<F8>", function() require("knap").forward_jump() end)
+
+    local gknapsettings = {
+      texoutputext = "pdf",
+      textopdf = "pdflatex -shell-escape -synctex=1 -halt-on-error -interaction=batchmode %docroot%",
+      textopdfviewerlaunch = "sioyek %outputfile%",
+      textopdfviewerrefresh = "kill -HUP %pid%",
+    }
+    vim.g.knap_settings = gknapsettings
   end,
 }

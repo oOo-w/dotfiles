@@ -81,9 +81,7 @@ return {
     fmta(
       [[
         \begin{itemize}
-
             \item <>
-
         \end{itemize}
       ]],
       {
@@ -98,9 +96,7 @@ return {
     fmta(
       [[
         \begin{enumerate}
-
             \item <>
-
         \end{enumerate}
       ]],
       {
@@ -134,6 +130,28 @@ return {
           \caption{<>}
           \label{fig:<>}
         \end{figure}
+        ]],
+      {
+        i(1),
+        i(2),
+        i(3),
+        i(4),
+      }
+    ),
+    { condition = line_begin }
+  ),
+  s(
+    { trig = "ntab", snippetType = "autosnippet" },
+    fmta(
+      [[
+        \begin{table}[htb!]
+          \centering
+          \caption{<>}
+          \label{tab:<>}
+          \begin{tabular}{<>}
+            <>
+          \end{tabular}
+        \end{table}
         ]],
       {
         i(1),

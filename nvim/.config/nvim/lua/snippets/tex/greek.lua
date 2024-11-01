@@ -46,10 +46,10 @@ return {
     t "\\Omega",
   }),
   s({ trig = ";p", snippetType = "autosnippet" }, {
-    t "\\psi",
+    t "\\pi",
   }),
   s({ trig = ";P", snippetType = "autosnippet" }, {
-    t "\\Psi",
+    t "\\Pi",
   }),
   s({ trig = ";f", snippetType = "autosnippet" }, {
     t "\\phi",

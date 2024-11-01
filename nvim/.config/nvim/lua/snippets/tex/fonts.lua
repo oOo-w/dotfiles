@@ -26,13 +26,13 @@ end
 -- Return snippet tables
 return {
   -- TYPEWRITER i.e. \texttt
-  s(
-    { trig = "([^%a])tt", regTrig = true, wordTrig = false, snippetType = "autosnippet", priority = 2000 },
-    fmta("<>\\texttt{<>}", {
-      f(function(_, snip) return snip.captures[1] end),
-      d(1, get_visual),
-    })
-  ),
+  -- s(
+  --   { trig = "([^%a])tt", regTrig = true, wordTrig = false, snippetType = "autosnippet", priority = 2000 },
+  --   fmta("<>\\texttt{<>}", {
+  --     f(function(_, snip) return snip.captures[1] end),
+  --     d(1, get_visual),
+  --   })
+  -- ),
   -- ITALIC i.e. \textit
   s(
     { trig = "([^%a])tii", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
@@ -80,9 +80,18 @@ return {
       d(1, get_visual),
     })
   ),
+  s(
+    { trig = "([^%a])bs", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
+    fmta("<>\\boldsymbol{<>}", {
+      f(function(_, snip) return snip.captures[1] end),
+      d(1, get_visual),
+    }),
+    { condition = tex.in_mathzone }
+  ),
+
   -- REGULAR TEXT i.e. \text (in math environments)
   s(
-    { trig = "([^%a])tee", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
+    { trig = "([^%a])tt", regTrig = true, wordTrig = false, snippetType = "autosnippet" },
     fmta("<>\\text{<>}", {
       f(function(_, snip) return snip.captures[1] end),
       d(1, get_visual),

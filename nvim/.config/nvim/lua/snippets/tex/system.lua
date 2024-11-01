@@ -19,7 +19,7 @@ tex.in_text = function() return not tex.in_mathzone() end
 return {
   -- USE A LATEX PACKAGE
   s(
-    { trig = "pack", snippetType = "autosnippet" },
+    { trig = "pkg", snippetType = "autosnippet" },
     fmta(
       [[
         \usepackage{<>}
@@ -35,20 +35,23 @@ return {
     { trig = "h1", snippetType = "autosnippet" },
     fmta([[\section{<>}]], {
       d(1, get_visual),
-    })
+    }),
+    { condition = line_begin }
   ),
   -- SUBSECTION
   s(
     { trig = "h2", snippetType = "autosnippet" },
     fmta([[\subsection{<>}]], {
       d(1, get_visual),
-    })
+    }),
+    { condition = line_begin }
   ),
   -- SUBSUBSECTION
   s(
     { trig = "h3", snippetType = "autosnippet" },
     fmta([[\subsubsection{<>}]], {
       d(1, get_visual),
-    })
+    }),
+    { condition = line_begin }
   ),
 }

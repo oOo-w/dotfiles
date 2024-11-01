@@ -12,7 +12,7 @@ local config = {
 	audible_bell = "Disabled",
 
 	use_fancy_tab_bar = false,
-	hide_tab_bar_if_only_one_tab = true,
+	hide_tab_bar_if_only_one_tab = false,
 	window_decorations = "NONE",
 	window_background_opacity = 0.85,
 	text_background_opacity = 0.85,
